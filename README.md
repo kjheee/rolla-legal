@@ -28,7 +28,7 @@ GitHub Pages는 main 브랜치의 루트에서 Jekyll로 게시합니다. Markdo
 
 ## 관리
 
-운영자: 김정희 / heehee2302@gmail.com
+운영자·개인정보 보호책임자·문의 이메일은 [고객 지원](support.md#contact) 한곳에서 관리합니다.
 
 개인 문의·삭제 요청은 GitHub 이슈에 올리지 않습니다. 문의 이메일을 이용하세요.
 

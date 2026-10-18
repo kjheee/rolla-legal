@@ -14,4 +14,4 @@ Rolla의 이용약관, 개인정보 처리방침과 고객 지원 안내입니�
 - [고객 지원]({{ '/support/' | relative_url }})
 - [계정 삭제 요청]({{ '/delete-account/' | relative_url }})
 
-운영자: 김정희 · 문의: [heehee2302@gmail.com](mailto:heehee2302@gmail.com)
+[운영자 및 연락처]({{ '/support/#contact' | relative_url }})
