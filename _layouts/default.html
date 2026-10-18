@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }} · Rolla</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fcfcfc;color:#252525;font:16px/1.8 system-ui,-apple-system,sans-serif}header,main,footer{max-width:880px;margin:auto;padding:24px}header{border-bottom:1px solid #e5e5e5}nav{display:flex;flex-wrap:wrap;gap:16px}a{color:#315ba8;text-underline-offset:4px}header>a{font-weight:800;font-size:25px;color:#252525}h1{font-size:30px;line-height:1.4}h2{margin-top:36px;font-size:22px}blockquote{margin:20px 0;padding:12px 18px;background:#fff5d6;border-left:4px solid #c6952b}table{display:block;overflow-x:auto;border-collapse:collapse}th,td{padding:12px;border:1px solid #ddd;text-align:left;min-width:110px}footer{border-top:1px solid #e5e5e5;color:#666;font-size:14px}a:focus-visible{outline:3px solid #c6952b;outline-offset:4px}
+</style>
+</head>
+<body>
+<header><a href="{{ '/' | relative_url }}">Rolla</a><nav aria-label="안내 문서"><a href="{{ '/terms/' | relative_url }}">이용약관</a><a href="{{ '/privacy/' | relative_url }}">개인정보 처리방침</a><a href="{{ '/support/' | relative_url }}">고객 지원</a><a href="{{ '/delete-account/' | relative_url }}">계정 삭제</a></nav></header>
+<main>{{ content }}</main>
+<footer>운영자 김정희 · <a href="mailto:heehee2302@gmail.com">heehee2302@gmail.com</a></footer>
+</body>
+</html>

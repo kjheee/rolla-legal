@@ -1,0 +1,8 @@
+title: Rolla
+lang: ko
+url: https://kjheee.github.io
+baseurl: /rolla-legal
+markdown: kramdown
+exclude:
+  - README.md
+  - AGENTS.md
