@@ -6,11 +6,11 @@ permalink: /privacy/
 
 # rolla 개인정보 처리방침
 
-> 출시 검토본입니다. 보관·파기 운영 기준은 확정했습니다. 서울 리전·로그 보관 설정과 외부 서비스의 공개 자료를 반영했습니다. 국외 이전의 적용 근거와 공급자별 미확인 처리 범위를 확정한 뒤 정식 시행일을 공지합니다.
+> 시행일: 2026년 10월 20일
 
-- 개인정보 처리자·보호책임자 및 연락처: [운영자 및 연락처]({{ '/support/#contact' | relative_url }})
-- 보관 기준 검토일: 2026년 10월 20일
-- 정식 시행일: 최종 검증 후 공개하는 날
+- 문서 버전: 2026-10-20
+- 개인정보 처리자·보호책임자: 김정희
+- 개인정보 문의: [heehee2302@gmail.com](mailto:heehee2302@gmail.com) · [고객 지원]({{ '/support/#contact' | relative_url }})
 
 ## 처리 항목과 목적
 
@@ -26,31 +26,43 @@ permalink: /privacy/
 
 기기 앨범 접근은 사진 선택에 사용합니다. 전체 앨범을 서버에 업로드하지 않으며, 이용자가 기록·프로필·문의에 선택한 사진을 각 기능의 목적에 따라 처리합니다. 초안과 나만 보기 기록도 저장·동기화를 위해 서버에 전송될 수 있습니다. 촬영 일시를 기록 구성에 이용하고 업로드용 이미지에서 GPS 메타데이터를 제거하는 정책을 적용합니다. 출력 파일 검증을 거쳐 해당 정책이 실제로 지켜지는지 확인합니다.
 
-## 공개와 외부 처리
+## 공개와 외부 서비스 이용
 
-프로필과 공개한 콘텐츠는 서비스의 공개 범위·차단 규칙에 따라 다른 이용자에게 표시됩니다. 개인정보를 판매하지 않습니다. 법령에 근거하거나 별도로 동의를 받은 경우를 제외하고 목적 외 제공을 하지 않습니다.
+프로필과 공개한 콘텐츠는 서비스의 공개 범위·차단 규칙에 따라 다른 이용자에게 표시됩니다. 개인정보를 판매하지 않으며, 법령에 근거하거나 별도로 동의를 받은 경우를 제외하고 목적 외 제공을 하지 않습니다.
 
-서비스 제공 과정에서 아래 외부 서비스가 정보를 처리합니다. 데이터 저장 리전, 수령 회사의 소재지, 실제 처리 국가는 서로 다르므로 구분하여 안내합니다.
+### 서비스 운영을 위한 처리위탁·보관
 
-| 서비스·연락처 | 처리 항목·목적 및 전송 시점 | 확인한 위치와 보관 범위 |
-| --- | --- | --- |
-| Supabase · [개인정보 문의](mailto:privacy@supabase.io) | 가입·인증 정보, 프로필, 기록·사진, 관계·알림, 신고·문의. 앱 이용 시 암호화 통신으로 인증·DB·Storage·서버 함수 처리 | Rolla DB·Storage는 대한민국 서울(ap-northeast-2). 계정 데이터는 아래 탈퇴·파기 기준 적용. API·DB 로그 1일, 인증 감사 로그 1시간(Free 플랜). 서울 리전이 지원·재위탁 처리까지 국내로 한정하지는 않음 |
-| Expo · [문의](https://expo.dev/contact) | 푸시 토큰, 알림 제목·본문, 알림 이동용 식별자. 알림 발송 시 암호화 통신으로 APNs·FCM에 전달 | 공식 방침에 미국 이전 명시. 알림 본문은 다음 전달 서비스로 넘기는 데 필요한 동안 메모리·큐에서 처리하고 DB에 저장하지 않음. 토큰의 전체 보관 기간을 본문의 전달 기간과 동일하게 보지 않음 |
-| Apple APNs · [개인정보 문의](https://www.apple.com/legal/privacy/contact/) / Google FCM · [개인정보 안내](https://firebase.google.com/support/privacy) | 기기 토큰과 알림 데이터. 푸시 수신을 허용한 기기에 전달 | 미전달 메시지의 최대 보관은 APNs 30일, FCM 28일이며 만료 설정에 따라 짧아질 수 있음. 이 기간은 토큰 등 모든 정보의 파기 기간을 뜻하지 않음 |
-| Discord Inc. · 운영 알림 | 신고·문의 접수 시 “새 신고/문의가 접수됐어요. Supabase에서 확인해 주세요.”라는 고정 문구만 전달. 사용자 정보·신고 및 문의 ID·원문·사진·파일 경로는 전송하지 않음 | 신고·문의 원문은 Supabase DB, 사진은 비공개 Storage에서 운영자가 확인. 변경 전에 Discord로 전송된 개인정보 사본은 아래 보관·파기 기준에 따라 별도 관리 |
-| Google Gmail · [개인정보 문의](https://support.google.com/policies/troubleshooter/7575787?hl=ko) | 이메일 문의·계정 삭제 요청의 발신 주소, 본문과 첨부. 메일 송수신 시 처리 | Google은 전 세계 서버 처리 방침을 공개하며 이 개인 Gmail 계정에 국내 전용 저장 위치를 설정하지 않음. Rolla의 문의 사본에는 위와 같은 1년 이내·탈퇴 시 조기 삭제 기준 적용 |
+Rolla는 계정 인증, 기록 저장, 이용자가 요청한 알림 전달과 문의 대응을 위해 아래 서비스를 이용합니다. 국외에서 이루어지는 계약 체결·이행에 필요한 처리위탁·보관에는 개인정보 보호법 제28조의8 제1항 제3호를 근거로 이 방침에 처리 내용을 공개합니다. 기기 알림 권한이나 일반 약관 동의를 별도의 국외 이전 동의로 취급하지 않습니다. 해당 근거에 포함되지 않는 새로운 목적의 이전을 시작하는 경우에는 적용 가능한 근거와 필요한 절차를 먼저 마련합니다.
 
-Supabase의 [DPA](https://supabase.com/legal/customer-resources/data-processing-addendum)와 [재위탁 목록](https://supabase.com/legal/customer-resources/subprocessor-list)은 고객 데이터의 처리와 지원·재위탁 관계를 설명합니다. 재위탁 목록의 회사 소재지만으로 Rolla 이용자의 데이터가 모든 해당 국가로 전송된다고 판단하지 않습니다.
+| 수령자·연락처 | 처리 업무·항목 | 처리 위치·시기·방법 | 보유·이용 기준 |
+| --- | --- | --- | --- |
+| Supabase Pte. Ltd. · [privacy@supabase.io](mailto:privacy@supabase.io) | 인증, DB, 사진 저장, 서버 함수. 가입·프로필·기록·사진·관계·알림·신고·문의와 운영 로그 | 주요 DB·Auth·Storage는 대한민국 서울(ap-northeast-2). 서비스 이용 시 암호화 통신으로 처리. 서버 함수·로그·지원·재위탁에는 글로벌 인프라가 사용될 수 있으며, 서울 저장 리전과 구분 | Rolla가 관리하는 데이터는 아래 계정·신고·문의 파기 기준 적용. 현재 Free 플랜의 API·DB 로그 1일, 인증 감사 로그 1시간. 별도 감사 로그 DB 기록은 꺼져 있음 |
+| 650 Industries, Inc. (Expo) · [문의](https://expo.dev/contact) | 푸시 전달. Expo 푸시 토큰, 알림 제목·본문, 알림 이동용 식별자 | 미국. 기기 알림 등록과 알림 발송 시 암호화 통신으로 전달하며 Apple APNs·Google FCM을 통해 기기로 전송 | 알림 본문은 APNs·FCM에 전달하는 데 필요한 동안 메모리·큐에서 처리하고 DB에 저장하지 않음. 토큰에는 이 본문 보관 기준을 적용하지 않음. 토큰의 일률적인 보관 일수는 Expo 공개 방침에 제시돼 있지 않으며 삭제 요청은 운영자가 접수해 필요한 공급자 조치를 요청 |
+| Apple Inc. (APNs) · [개인정보 문의](https://www.apple.com/legal/privacy/contact/) | iOS 알림 전달. 기기 토큰·알림 데이터 | 미국을 포함한 Apple의 처리 인프라. 알림 등록·발송 시 암호화 통신으로 처리 | 미전달 알림은 만료 설정에 따라 최대 30일. 토큰 등 기타 정보는 Apple이 공개한 서비스 제공·보안·법적 의무에 필요한 기간 기준을 적용 |
+| Google LLC (FCM) · [Firebase 문의](https://firebase.google.com/support/privacy) | Android 알림 전달. 기기 토큰·Firebase 설치 ID·알림 데이터 | 미국을 포함한 Google 글로벌 인프라. 알림 등록·발송 시 암호화 통신으로 처리 | 미전달 알림은 최대 28일. Firebase 설치 ID는 삭제 API 요청까지 보관하며, 요청 후 운영·백업 시스템에서 180일 이내 제거한다는 공급자 기준 적용. Rolla의 토큰 등록 해제만으로 해당 API 삭제까지 완료됐다고 보지 않음 |
+| Google LLC (Gmail) · [개인정보 문의](https://policies.google.com/privacy?hl=ko) | 이메일 문의 수신·답변. 발신·수신 주소, 본문, 이용자가 보낸 첨부 | 미국을 포함한 Google 글로벌 인프라. 이메일 송수신 시 처리하며 이 개인 Gmail 계정에 국내 전용 저장 위치를 설정하지 않음 | 운영자가 관리하는 문의·답변 사본은 처리 완료 후 1년 이내, 탈퇴 관련 개인정보는 조기 삭제. Google의 잔여 보안·백업 사본에는 공급자의 공개 삭제·보관 절차 적용 |
 
-소셜 로그인은 이용자가 선택한 Apple·Google·Kakao의 인증을 거쳐 제공자 식별자와 제공되는 이메일·이름 등의 정보로 Rolla 계정을 식별하는 방식입니다. 해당 제공자 계정의 자체 처리에는 각 제공자의 방침이 적용되며, Rolla 탈퇴가 해당 소셜 계정의 삭제를 뜻하지 않습니다.
+Supabase는 싱가포르 법인이 제공하며 미국 등 다른 국가의 사업자를 이용합니다. 수령 회사의 소재지와 실제 데이터 저장 리전은 같은 뜻이 아닙니다. [Supabase 데이터 위치 안내](https://supabase.com/docs/guides/security/gdpr-compliance), [처리 계약(DPA)](https://supabase.com/legal/customer-resources/data-processing-addendum), [재위탁 목록](https://supabase.com/legal/customer-resources/subprocessor-list)에 지원·재위탁 범위가 공개되어 있습니다. 해당 목록의 모든 업체에 Rolla 이용자 정보가 전송된다는 뜻은 아닙니다.
 
-정책·지원 사이트는 GitHub Pages로 제공합니다. 사이트 운영자는 별도의 분석 스크립트나 입력 양식을 두지 않습니다. GitHub는 사이트 제공과 보안을 위해 방문자의 IP 등 접속 정보를 처리할 수 있습니다. [GitHub 개인정보 안내](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement), [Google 개인정보 안내](https://policies.google.com/privacy?hl=ko), [Expo 개인정보 안내](https://expo.dev/privacy), [Discord 개인정보·보관 안내](https://support.discord.com/hc/en-us/articles/5431812448791-How-long-Discord-keeps-your-information)를 참고할 수 있습니다.
+Expo의 [개인정보 방침](https://expo.dev/privacy)과 [푸시 전달 안내](https://docs.expo.dev/push-notifications/faq/) 및 [재위탁 목록](https://expo.dev/privacy/subprocessors), Apple의 [개인정보 방침](https://www.apple.com/legal/privacy/en-ww/), Google의 [Firebase 처리·보관 안내](https://firebase.google.com/support/privacy)와 [데이터 보관 안내](https://policies.google.com/technologies/retention?hl=ko)에 공급자별 범위가 설명되어 있습니다. Google의 글로벌 처리 위치는 [공식 데이터센터 목록](https://www.google.com/about/datacenters/locations/) 등 공급자가 공개한 범위를 따르며, Rolla가 단일 국가를 지정한 서비스가 아닙니다.
 
-### 국외 이전 고지의 검토 상태
+### 이용자의 선택과 요청
 
-현재 공개 자료만으로 확정하지 못한 사항은 Supabase 지원·재위탁의 실제 적용 국가, 푸시 토큰의 사업자별 보관 범위, Gmail·GitHub의 이 서비스에 적용되는 처리 국가·기간과 법적 관계입니다. Discord에는 이용자의 개인정보를 새로 전송하지 않도록 변경했습니다. 이 변경이 다른 외부 서비스의 처리까지 없애는 것은 아닙니다. 일반 개인정보 처리방침 동의를 별도 국외 이전 동의로 간주하지 않으며, 적용 근거와 필요한 고지·동의 절차를 확정하기 전까지 이 문서를 정식 출시용 방침으로 표시하지 않습니다.
+푸시는 앱·기기 알림 설정에서 끌 수 있으며, 알림을 꺼도 기록 작성·조회 등 다른 기능을 이용할 수 있습니다. Rolla 서버에 등록된 기기 토큰은 로그아웃 시 등록 해제를 요청하고 탈퇴 시 계정과 함께 정리합니다. 이 조치와 기기·푸시 제공자 자체 식별자의 삭제는 구분합니다.
 
-푸시는 앱·기기 알림 설정에서 끌 수 있고 사진·답장 메일은 첨부·입력하지 않을 수 있습니다. 앱 신고·문의 내용은 Discord로 복사하지 않습니다. 이메일 문의는 Gmail을 통해 처리하므로 모든 국외 처리를 피하는 수단이라고 안내하지 않습니다. 개인정보 처리 중지·삭제 요청은 [운영자 이메일]({{ '/support/#contact' | relative_url }})로 접수합니다.
+문의 사진·답장 메일은 첨부·입력하지 않을 수 있습니다. Gmail을 통한 이메일 문의를 원하지 않으면 앱 문의 폼으로 접수하고 답장 메일을 비워둘 수 있습니다. 이 경우 이메일 회신은 제공하지 않습니다. 앱 신고·문의 내용과 사진은 Supabase에 저장하며 Discord로 복사하지 않습니다.
+
+외부 처리의 중지·삭제 요청은 [운영자 이메일]({{ '/support/#contact' | relative_url }}) 또는 앱 문의로 접수합니다. 계정 인증·서버 저장에 필요한 처리를 중단하면 계정과 동기화 서비스 이용이 제한되거나 계정 삭제가 필요할 수 있습니다. 요청 범위와 영향을 확인한 후 처리하며, 필요한 공급자 요청도 운영자가 진행합니다.
+
+### 소셜 로그인 제공자의 처리
+
+이용자가 선택한 Apple·Google·Kakao의 인증을 거쳐 제공자 식별자와 제공되는 이메일·이름 등의 정보로 Rolla 계정을 식별합니다. 제공자 계정 자체의 수집·이용에는 각 사업자의 방침이 적용됩니다. Rolla 탈퇴는 해당 소셜 계정의 삭제를 뜻하지 않습니다.
+
+### 공개 안내 사이트와 운영 알림
+
+정책·지원 사이트는 GitHub Pages로 제공합니다. Rolla는 이 사이트에 회원 DB, 이용자의 기록·사진·신고·문의 자료를 업로드하지 않고, 별도의 분석 스크립트나 입력 양식을 두지 않습니다. GitHub는 방문자의 IP 등 접속 정보를 사이트 제공과 보안을 위해 직접 수집할 수 있습니다. 이는 Rolla 앱의 회원 자료를 GitHub에 복사하는 처리와 구분됩니다. 방문 정보의 처리·보관 및 권리 요청은 [GitHub 개인정보 안내](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)를 따르며 [dpo@github.com](mailto:dpo@github.com)으로 문의할 수 있습니다.
+
+Discord에는 “새 신고/문의가 접수됐어요. Supabase에서 확인해 주세요.”라는 고정 문구만 보냅니다. 사용자 정보, 신고·문의 ID, 원문, 사진과 파일 경로는 보내지 않습니다. 변경 전에 전송된 개인정보 사본은 아래 보관·파기 기준에 따라 별도로 관리합니다.
 
 ## 보관과 파기
 
@@ -82,3 +94,8 @@ Supabase의 [DPA](https://supabase.com/legal/customer-resources/data-processing-
 ## 보호 조치와 변경
 
 서비스는 접근 권한 제한, 인증, 전송 구간 암호화 등 보호 조치를 적용합니다. 개인정보 처리방침을 변경하면 변경 내용과 시행일을 공개 문서에 알립니다. 개인정보 관련 요청과 이의는 [고객 지원]({{ '/support/#contact' | relative_url }})에 안내된 이메일로 접수합니다.
+
+
+## 변경 안내
+
+2026년 10월 20일 공개본에서는 기존 서비스의 외부 처리 역할·보관 기준·이용자 선택을 구체화하고, Discord에 원문·사진·식별자를 보내지 않는 변경을 반영했습니다. 이번 문서 정리로 새로운 수집 목적이나 외부 전송 기능을 추가하지 않습니다. 이전 공개 문서는 [변경 이력](https://github.com/kjheee/rolla-legal/commits/main/privacy.md)에서 확인할 수 있습니다.
