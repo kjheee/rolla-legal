@@ -61,3 +61,17 @@ GitHub Pages의 main 루트 Jekyll 배포를 사용한다. 정책 변경 후 앱
 - [Supabase 플랜](https://supabase.com/pricing) · [백업](https://supabase.com/docs/guides/platform/backups) · [DPA](https://supabase.com/legal/customer-resources/data-processing-addendum)
 
 사이트가 HTTP 200으로 열리는 것과 출시 준비 완료는 구분한다.
+
+
+## 2026-10-20 추가 확인 및 앱 연결
+
+- [x] Supabase Authentication → Audit Logs에서 `Write audit logs to the database`가 꺼져 있음을 읽기 전용으로 확인했다. 운영 설정은 변경하지 않았다. 과거 DB 행의 존재 여부와 삭제 완료는 이 확인으로 증명하지 않는다.
+- [x] 공식 요금표에서 Free의 API·DB 로그 보관 1일, 인증 감사 로그 1시간을 확인해 공개 문서에 반영했다. 임의로 30일 등 새 기간을 정하지 않았다.
+- [x] Expo 푸시 본문은 전달에 필요한 메모리·큐 처리, APNs 미전달 메시지 최대 30일, FCM 최대 28일을 공급자 문서로 확인했다. 메시지의 기간을 토큰 전체 보관 기간으로 확대 해석하지 않는다.
+- [x] Discord의 미국 및 다른 국가 처리, Gmail의 전 세계 처리 방침을 명시하고, 수신 항목·전송 시점·Rolla의 삭제 범위·공급자 문의 수단을 표로 정리했다.
+- [x] 앱 문의 화면의 지원 이메일을 공개 연락처로 연결하고, 가입 시 금지 콘텐츠 안내·신고 검토 시작 목표를 구현했다. 기존 동의 기록은 갱신하지 않는다.
+- [ ] 국외 이전의 적용 근거를 확정한다. 일반 가입 동의를 별도 국외 이전 동의로 간주하지 않는다. Discord는 운영 편의만으로 계약 이행 필수 위탁이라고 단정할 수 없으므로 계약 관계·적용 근거를 검토하거나, 개인 내용을 전송하지 않는 방식으로 변경해야 한다. 이 변경은 현재 문서 수정에 포함하지 않았다.
+- [ ] 공급자별 실제 국가·토큰 보관 등 공개 자료에 없는 항목을 공급자에게 확인한다. 문서 링크만으로 확인된 것으로 표시하지 않는다.
+- [ ] 위 사항을 닫은 후 공개일을 확정하고 앱 `LEGAL_VERSION`과 신규 가입 전송 값의 회귀 테스트를 함께 갱신한다. 현재 `2026-10-17`은 유지한다. 과거 가입자의 동의 버전을 일괄 덮어쓰지 않으며, 새 동의가 필요한 처리는 해당 동의를 받기 전 시작하지 않는다.
+
+추가 출처: [Supabase 인증 감사 로그](https://supabase.com/docs/guides/auth/audit-logs), [Expo 푸시 FAQ](https://docs.expo.dev/push-notifications/faq/), [APNs 보관](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns), [FCM 메시지 수명](https://firebase.google.com/docs/cloud-messaging/customize-messages/setting-message-lifespan), [개인정보보호위원회 국외 이전 안내](https://m.pipc.go.kr/np/default/page.do?mCode=D060040000).
